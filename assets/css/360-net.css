@@ -2101,6 +2101,9 @@ label + .select {
     justify-content: center;
     align-items: center;
   }
+  .contact .container section article .card-contact .form .button {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 425px) {
   .contact.content {
