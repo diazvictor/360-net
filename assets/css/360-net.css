@@ -1322,6 +1322,9 @@ label + .select {
 .navbar.is-info {
   background-color: #517DB9;
 }
+.navbar .logo-mobile {
+  display: none;
+}
 .navbar-end {
   display: flex;
 }
@@ -1336,15 +1339,40 @@ label + .select {
 .navbar-item.is-active {
   color: #202A44;
 }
-.navbar-item:nth-child(5),
-.navbar-item:nth-child(6) {
+.navbar-item.has-icon {
   padding: 0 10px;
   display: flex;
   align-items: center;
 }
-.navbar-item:nth-child(5) i,
-.navbar-item:nth-child(6) i {
+.navbar-item.has-icon.navbar-menu {
+  display: none;
+}
+.navbar-item.has-icon i {
   font-size: 20px;
+}
+@media screen and (max-width: 860px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  .navbar .logo-mobile {
+    display: block;
+  }
+  .navbar .logo {
+    display: none;
+  }
+  .navbar-item {
+    display: none;
+  }
+  .navbar-item.has-icon {
+    display: none;
+  }
+  .navbar-item.has-icon.navbar-menu {
+    display: block;
+    padding: 30px 0;
+  }
+  .navbar-item.has-icon.navbar-menu i {
+    font-size: 30px;
+  }
 }
 .breadcrumb {
   font-size: 1rem;
@@ -1758,6 +1786,40 @@ label + .select {
     transform: translateX(0%);
   }
 }
+@media screen and (max-width: 768px) {
+  .wrapper > .footer > .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .wrapper > .footer > .content span.title,
+  .wrapper > .footer > .content p {
+    text-align: center;
+  }
+  .wrapper > .footer > .content .links {
+    border-bottom: 1px solid #3D4E80;
+    padding-bottom: 40px;
+  }
+  .wrapper > .footer > .content .links a {
+    justify-content: center;
+  }
+  .wrapper > .footer > .content .links a::before {
+    font-family: inherit;
+    content: "";
+    margin-right: 0;
+  }
+  .wrapper > .footer > .content .support {
+    border-bottom: 1px solid #3D4E80;
+    padding-bottom: 40px;
+  }
+  .wrapper > .footer > .content .resume .social {
+    justify-content: center;
+  }
+  .wrapper > .footer .copyright p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 .d-flex {
   display: flex;
 }
@@ -1969,6 +2031,7 @@ label + .select {
   background-color: #F8FCF6;
   color: #6CC24A;
   padding: 50px 50px;
+  border-radius: 0 15px 15px 0;
 }
 .contact .container section article .card-contact .form .fields {
   display: grid;
@@ -2005,4 +2068,57 @@ label + .select {
 }
 .contact .container section article .card-contact .form .field select {
   background-position: right 5px top 50%, 0 0;
+}
+.contact .container section article .card-contact .form .has-icon.has-float {
+  display: none;
+}
+@media screen and (max-width: 860px) {
+  .contact .container {
+    width: 100%;
+  }
+  .contact .container section article .banner h1 {
+    font-size: 40px;
+  }
+  .contact .container section article .banner p {
+    width: 80%;
+  }
+  .contact .container section article .card-contact .info {
+    display: none;
+  }
+  .contact .container section article .card-contact .form {
+    position: relative;
+    border-left: 15px solid #6CC24A;
+  }
+  .contact .container section article .card-contact .form .has-icon.has-float {
+    position: absolute;
+    top: 45%;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    background: #6CC24A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .contact.content {
+    padding-top: 100px;
+  }
+  .contact .container {
+    width: 100%;
+  }
+  .contact .container section article .banner h1 {
+    font-size: 40px;
+  }
+  .contact .container section article .banner p {
+    width: 80%;
+  }
+  .contact .container section article .card-contact .info {
+    display: none;
+  }
+  .contact .container section article .card-contact .form .fields {
+    grid-gap: 0;
+  }
 }

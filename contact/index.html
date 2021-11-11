@@ -14,12 +14,13 @@
 			<nav class="navbar is-success">
 				<div class="navbar-start">
 					<a href="/">
-						<img src="/assets/images/logo.svg">
+						<img src="/assets/images/logo.svg" class="logo">
+						<img src="/assets/images/logo-white.svg" class="logo-mobile">
 					</a>
 				</div>
 
 				<div class="navbar-end">
-					<a class="navbar-item" href="/">
+					<a class="navbar-item is-active" href="/">
 						Inicio
 					</a>
 
@@ -31,16 +32,20 @@
 						Servicios +
 					</a>
 
-					<a class="navbar-item is-active" href="/contact/">
+					<a class="navbar-item" href="/contact/">
 						Contacto
 					</a>
 
-					<a class="navbar-item" href="javascript:0;">
+					<a class="navbar-item has-icon" href="javascript:0;">
 						<i class="fas fa-headset"></i>
 					</a>
 
-					<a class="navbar-item" href="javascript:0;">
+					<a class="navbar-item has-icon" href="javascript:0;">
 						<i class="fas fa-user"></i>
+					</a>
+
+					<a class="navbar-item has-icon navbar-menu" href="javascript:0;">
+						<i class="fas fa-bars"></i>
 					</a>
 				</div>
 			</nav>
@@ -143,6 +148,10 @@
 
 									<button type="button" class="button is-primary text-uppercase">Enviar</button>
 								</form>
+
+								<div class="has-icon has-float">
+									<img src="/assets/images/icons/address-book.svg">
+								</div>
 							</div>
 						</div>
 					</article>
