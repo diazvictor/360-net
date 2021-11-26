@@ -996,10 +996,10 @@ a {
   display: block;
 }
 .navbar + .dropdown.is-active.about-us .dropdown-menu .dropdown-cover {
-  background-image: linear-gradient(rgba(32, 42, 68, 0.6), rgba(32, 42, 68, 0.6)), url(/assets/images/about-us.webp);
+  background-image: linear-gradient(rgba(32, 42, 68, 0.6), rgba(32, 42, 68, 0.6)), url(/360-net/assets/images/about-us.webp);
 }
 .navbar + .dropdown.is-active.services .dropdown-menu .dropdown-cover {
-  background-image: linear-gradient(rgba(32, 42, 68, 0.6), rgba(32, 42, 68, 0.6)), url(/assets/images/services.webp);
+  background-image: linear-gradient(rgba(32, 42, 68, 0.6), rgba(32, 42, 68, 0.6)), url(/360-net/assets/images/services.webp);
 }
 .navbar + .dropdown .dropdown-menu {
   width: 80%;
@@ -1348,10 +1348,10 @@ a {
   content: " -";
 }
 .navbar.is-mobile .dropdown.about-us .dropdown-menu .dropdown-cover {
-  background-image: linear-gradient(rgba(32, 42, 68, 0.6), rgba(32, 42, 68, 0.6)), url(/assets/images/about-us.webp);
+  background-image: linear-gradient(rgba(32, 42, 68, 0.6), rgba(32, 42, 68, 0.6)), url(/360-net/assets/images/about-us.webp);
 }
 .navbar.is-mobile .dropdown.services .dropdown-menu .dropdown-cover {
-  background-image: linear-gradient(rgba(32, 42, 68, 0.6), rgba(32, 42, 68, 0.6)), url(/assets/images/services.webp);
+  background-image: linear-gradient(rgba(32, 42, 68, 0.6), rgba(32, 42, 68, 0.6)), url(/360-net/assets/images/services.webp);
 }
 .navbar.is-mobile .dropdown.services .dropdown-menu .dropdown-links {
   padding: 55px 0 100px 0 !important;
@@ -2659,7 +2659,7 @@ a {
   padding: 0;
 }
 .isp.content section:nth-child(1) {
-  background-image: linear-gradient(90deg, rgba(61, 78, 128, 0.9) 0%, rgba(61, 78, 128, 0.5) 50%, rgba(255, 255, 255, 0) 100%), url(/assets/images/isp/hero.webp);
+  background-image: linear-gradient(90deg, rgba(61, 78, 128, 0.9) 0%, rgba(61, 78, 128, 0.5) 50%, rgba(255, 255, 255, 0) 100%), url(/360-net/assets/images/isp/hero.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2735,7 +2735,7 @@ a {
   font-weight: 400;
 }
 .isp.content section:nth-child(3) {
-  background-image: linear-gradient(180deg, rgba(72, 159, 223, 0.2), rgba(72, 159, 223, 0.1)), url(/assets/images/isp/se_mejor.png);
+  background-image: linear-gradient(180deg, rgba(72, 159, 223, 0.2), rgba(72, 159, 223, 0.1)), url(/360-net/assets/images/isp/se_mejor.png);
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
