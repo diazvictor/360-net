@@ -1,0 +1,22 @@
+// @package   CCS
+// @filename  visibility.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      05.07.2021 00:10:32 -04
+
+// Para compilar el archivo desde la consola:
+// lessc visibility.less > visibility.css
+
+.is-hidden {
+	@media screen and (max-width: @breakpoints[medium]) {
+		&-md {
+			display: none
+		}
+	}
+
+	@media screen and (max-width: @breakpoints[small]) {
+		&-sm {
+			display: none
+		}
+	}
+}

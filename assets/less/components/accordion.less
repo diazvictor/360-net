@@ -1,0 +1,74 @@
+// @package   CCS
+// @filename  accordion.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      04.08.2021 23:04:13 -04
+
+// Para compilar el archivo desde la consola:
+// lessc accordion.less > accordion.css
+
+.accordion {
+	&-item {
+		border: 1px solid darken(@white, 5%);
+		border-radius: 20px;
+		box-shadow: 0rem 1rem 2rem 0.1rem rgba(0, 0, 0, .075);
+
+		.accordion-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: @white;
+			color: #3D4E80;
+			font-weight: 700;
+			padding: 2rem;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			.icon {
+				font-size: 20px;
+				font-style: normal;
+
+				&::before {
+					font-family: "Font Awesome 5 Free";
+					font-weight: 900;
+					content: "\f078";
+				}
+			}
+		}
+
+		.accordion-content {
+			display: none;
+			border: 1px solid darken(@white, 5%);
+			border-radius: 0 0 20px 20px;
+			padding: 0rem 2rem 2rem 2rem;
+
+			p {
+				color: lighten(@grey, 15%);
+				font-weight: 400;
+			}
+		}
+
+		&.is-active {
+			.accordion-head {
+				border-bottom: none;
+
+				.icon {
+					&::before {
+						content: "\f077";
+					}
+				}
+			}
+
+			.accordion-content {
+				display: block;
+				border-top: none;
+			}
+		}
+
+		& + .accordion-item {
+			margin-top: 30px;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+// @package   360NET
+// @filename  tabs.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      29.11.2021 12:15:23 -04
+
+// Para compilar el archivo desde la consola:
+// lessc tabs.less > tabs.css
+
+.tabs {
+	display: flex;
+	flex-flow: column;
+
+	.tab-item {
+		color: lighten(@grey, 15%);
+		font-weight: 400;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.is-active {
+			font-weight: 700;
+
+			&::before {
+				visibility: visible;
+			}
+		}
+
+		& + .tab-item {
+			margin-top: 20px;
+		}
+
+		&::before {
+			visibility: hidden;
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			content: "\f068";
+			color: #3D4E80;
+			margin-right: 5px;
+		}
+	}
+
+	& + .tab-content {
+		.tab-pane {
+			display: none;
+
+			&.is-active {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,133 @@
+// @package   CCS
+// @filename  dropdown.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      05.08.2021 18:48:34 -04
+
+// Para compilar el archivo desde la consola:
+// lessc dropdown.less > dropdown.css
+
+.navbar {
+	&.is-mobile {
+		.dropdown {
+			&-toggle {
+				&::after {
+					content: " +";
+				}
+
+				&.is-active::after {
+					content: " -"
+				}
+			}
+
+			&-menu {
+				display: none;
+				background-color: @white;
+				position: absolute;
+				width: 80%;
+				right: 0;
+				z-index: 1;
+				border-bottom: 3px solid @blue-dark;
+
+				&.is-active {
+					display: block;			
+				}
+			}
+
+			&-cover {
+				background-image: linear-gradient(rgba(32, 42, 68, .6), rgba(32, 42, 68, .6)),
+				url(/assets/images/services.webp);
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				height: 12rem;
+
+				span {
+					display: flex;
+					align-items: center;
+					color: @white;
+					font-size: 20px;
+					text-transform: uppercase;
+					margin-bottom: 20px;
+					font-weight: bold;
+				}
+			}
+
+			&-links {
+				@m-bottom: 30px;
+				position: relative;
+				padding: 55px 0 100px 0 !important;
+
+				a {
+					display: block;
+					width: 100%;
+					color: @grey;
+					text-align: center;
+					text-transform: uppercase;
+					padding: 0 !important;
+					margin-bottom: @m-bottom;
+
+					i {
+						color: #4699D7;
+						margin-right: 10px;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			&-flags {
+				position: absolute;
+				top: 82px;
+				right: -82px;
+				transform: rotate(-90deg);
+
+				a {
+					color: white;
+					display: flex;
+					align-items: center;
+					padding: 5px 20px !important;
+					border-radius: 20px 0px 0px 20px;
+					margin-bottom: 0 !important;
+					width: min-content;
+					text-transform: uppercase;
+
+					svg {
+						margin-left: 10px;
+						transform: rotate(90deg);
+					}
+
+					&:first-child {
+						background-color: #3D4E80;
+						margin-left: auto;
+					}
+
+					&:last-child {
+						background-color: #489FDF;
+					}
+				}
+			}
+
+			&-close {
+				color: #517DB9;
+				font-size: 20px;
+				font-weight: bold;
+				text-transform: uppercase;
+				position: absolute;
+				top: 29px;
+				left: -84px;
+				padding: 1rem 0;
+				transform: rotate(-90deg);
+
+				i {
+					color: #F57F7F;
+				}
+			}
+		}
+	}
+}

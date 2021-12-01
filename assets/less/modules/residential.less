@@ -1,0 +1,569 @@
+// @package   360Net
+// @filename  residential.less
+// @version   1.0
+// @author    Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      29.11.2021 13:06:12 -04
+
+// Para compilar el archivo desde la consola:
+// lessc residential.less > residential.css
+
+.residential.content {
+	padding-top: 0px;
+
+	section:nth-child(1) {
+		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(255, 255, 255, 0) 70%),
+		url(/assets/images/residential/hero.webp);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: right;
+
+		article.hero-content {
+			padding: 12rem 2rem;
+
+			h1 {
+				color: @white;
+				font-size: 30px;
+				font-weight: normal;
+				margin-bottom: 4px;
+			}
+
+			.hero-info {
+				display: flex;
+				margin-bottom: 35px;
+
+				div {
+					margin-right: 8px;
+					color: @white;
+
+					&:nth-child(1) {
+						h2 {
+							font-size: 18px;
+
+							span {
+								font-size: 44px;
+							}
+						}
+
+						h3 {
+							color: #6CC24A;
+							margin-top: -4px;
+							font-size: 16px;
+						}
+					}
+
+					&:nth-child(2){
+						h2 {
+							margin-top: -2px;
+							font-weight: lighter;
+							font-size: 55px;
+						}
+					}
+
+					&:nth-child(3) {
+						margin-top: 10px;
+						margin-right: 2px;
+
+						h2 {
+							color: #6CC24A;
+							font-size: 22px;
+						}
+
+						h3 {
+							color: #6CC24A;
+							font-size: 22px;
+						}
+					}
+
+					&:nth-child(4),
+					&:nth-child(5) {
+						margin-right: 0px;
+					}
+
+					&:nth-child(4) {
+						h2 {
+							font-size: 60px;
+						}
+					}
+
+					&:nth-child(5) {
+						h2 {
+							color: #6CC24A;
+							font-size: 40px;
+						}
+					}
+
+					&:nth-child(6){
+						h2 {
+							color: #6CC24A;
+							margin-top: 10px;
+							font-size: 25px;
+						}
+
+						h3 {
+							margin-top: -2px;
+							font-size: 19px;
+						}
+					}
+				}
+			}
+
+			.button {
+				background-color: #6CC24A;
+				color: #FFFFFF;
+				font-weight: 600;
+				text-align: center;
+				border: none;
+				border-radius: 50px;
+				padding: 15px 40px;
+				cursor:pointer;
+
+				&:focus {
+					box-shadow: 0 0 0 0.2rem rgba(108, 194, 74, 0.5)
+				}
+			}
+		}
+	}
+
+	section:nth-child(2) {
+		article.content {
+			padding: 8rem 0;
+
+			h1 {
+				text-align: center;
+				font-size: 55px;
+				font-weight: 400;
+				margin-bottom: 45px;
+			}
+
+			.cards {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+				grid-gap: 20px;
+				width: 100%;
+			}
+
+			.card {
+				display: grid;
+				grid-template-rows: auto 1fr auto;
+				background-color: #EEF2F8;
+				border-radius: 15px;
+
+				&-head {
+					text-align: center;
+					border-top-left-radius: 10px;
+					border-top-right-radius: 10px;
+					padding-top: 18px;
+					padding-bottom: 18px;
+					color: #FFF;
+					background-color: #202A44;
+
+					h2 {
+						font-size: 15px;
+					}
+
+					&.has-color-blue-dark {
+						background-color: #3D4E80;
+					}
+
+					&.has-color-blue {
+						background-color: #517DB9;
+					}
+
+					&.has-color-blue-light {
+						background-color: #489FDF;
+					}
+				}
+
+				&-content {
+					display: grid;
+					text-align: center;
+					color: #5F5F5F;
+					padding: 35px 12px;
+
+					.plan {
+						margin-bottom: 20px;
+
+						h2 {
+							font-size: 30px;
+						}
+					}
+
+					.info-plan {
+						p {
+							color: lighten(@grey, 15%);
+							font-weight: 400;
+							line-height: 25px;
+						}
+					}
+
+					.precio {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin-bottom: 20px;
+
+						> span {
+							font-size: 60px;
+							margin-top: -40px;
+						}
+
+						h3 {
+							font-size: 60px;
+
+							span {
+								font-size: 50px;
+								margin-top: -35px;
+								margin-right: -2px;
+								margin-left: -2px;
+							}
+						}
+
+						h4 {
+							font-size: 25px;
+							line-height: 25px;
+						}
+					}
+				}
+
+				&-food {
+					text-align: center;
+
+					.button {
+						background-color: #489FDF;
+						color: #FFFFFF;
+						border-radius: 50px;
+						padding-top: 12px;
+						padding-bottom: 12px;
+						cursor: pointer;
+						border: none;
+						margin-bottom: 35px;
+
+						&:focus {
+							box-shadow: 0 0 0 0.2rem rgba(72, 159, 223, 0.7)
+						}
+					}
+				}
+			}
+
+			#slider-cards {
+				display: none;
+				margin: 0 auto;
+			}
+
+			.splide__track {
+				overflow: visible;
+			}
+
+			.splide__slide {
+				display: grid;
+			}
+		}
+	}
+
+	section:nth-child(3) {
+		position: relative;
+		background: linear-gradient(
+			90deg, rgba(32, 42, 68, 0.8), rgba(32, 42, 68, 0.8)
+		), url(/assets/images/residential/fibra_optica.webp);
+		background-repeat: no-repeat;
+		background-position: left;
+		background-size: cover;
+		filter: contrast(150%);
+		text-align: center;
+		padding: 8rem 4rem;
+		margin-bottom: 70px;
+
+		h1 {
+			font-size: 55px;
+			font-weight: 400;
+			color: #FFFFFF;
+			margin-bottom: 15px;
+		}
+
+		h2 {
+			font-weight: 700;
+			font-size: 55px;
+			color: #FFFFFF;
+			margin-bottom: 25px;
+		}
+
+		p {
+			color: #FFFFFF;
+			line-height: 25px;
+			width: 80%;
+			margin: 0 auto;
+
+			span {
+				font-weight: 900;
+			}
+		}
+	}
+
+	section:nth-child(4) {
+		article {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+			grid-gap: 70px;
+			padding: 15px 35px;
+
+			&:nth-child(1) {
+				margin-bottom: 50px;
+
+				.content p {
+					color: lighten(@grey, 15%);
+					font-weight: 400;
+					line-height: 25px;
+				}
+			}
+
+			.banner img {
+				width: 100%;
+			}
+
+			.content {
+				h1 {
+					font-size: 55px;
+					margin-top: 8px;
+					margin-bottom: 15px;
+				}
+
+				h2 {
+					font-size: 55px;
+					font-weight: 400;
+					margin-bottom: 25px;
+				}
+			}
+
+			&:nth-child(2) .content p {
+				color: lighten(@grey, 15%);
+				font-weight: 400;
+				line-height: 25px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: @breakpoints[large]) {
+	.residential.content {
+		section:nth-child(4) {
+			article {
+				grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+
+				&:nth-child(1) {
+					.content p {}
+				}
+
+				.banner {
+					width: 100%;
+
+					#lottie {
+						width:;
+					}
+				}
+
+				.content {
+					h1 {
+						font-size: 30px;
+						margin-top: 8px;
+						margin-bottom: 15px;
+					}
+
+					h2 {
+						font-size: 30px;
+						font-weight: 400;
+						margin-bottom: 25px;
+					}
+				}
+
+				&:nth-child(2) .content p {
+					color: lighten(@grey, 15%);
+					font-weight: 400;
+					line-height: 25px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.residential.content section:nth-child(4) article {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 35px;
+		padding: 0px 20px;
+	}
+	.residential.content section:nth-child(4) article:nth-child(1) {
+		grid-template-areas: "image" "content";
+	}
+	.residential.content section:nth-child(4) article:nth-child(2) {
+		grid-template-areas: "image" "content";
+	}
+	.residential.content section:nth-child(4) article {
+		text-align: center;
+	}
+	.residential.content section:nth-child(4) article:nth-child(1) {
+		padding-top: 20px;
+		margin-bottom: 90px;
+	}
+	.residential.content section:nth-child(4) article:nth-child(2) {
+		padding-bottom: 20px;
+	}
+	.residential.content section:nth-child(4) article .banner {
+		grid-area: image;
+	}
+	.residential.content section:nth-child(4) article .banner img {
+		width: 80%;
+	}
+	.residential.content section:nth-child(4) article .content {
+		grid-area: content;
+	}
+	.residential.content section:nth-child(4) article .content h1 {
+		margin-bottom: 0px;
+		font-size: 35px;
+	}
+	.residential.content section:nth-child(4) article .content h2{
+		font-size: 26px;
+		margin-bottom: 30px;
+	}
+	.residential.content section:nth-child(4) article:nth-child(1) .content h2{
+		color: #8A8A8A;
+	}
+}
+
+@media screen and (max-width: @breakpoints[medium]) {
+	.residential.content {
+		section:nth-child(2) {
+			article.content {
+				h1 {
+					font-size: 30px;
+				}
+
+				.cards {
+					display: none;
+				}
+
+				.card {}
+
+				#slider-cards {
+					display: block;
+				}
+			}
+		}
+
+		section:nth-child(3) {
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+			h1 {
+				font-size: 30px;
+			}
+
+			h2 {
+				font-size: 30px;
+			}
+
+			p {}
+		}
+
+		section:nth-child(1) {
+			background-image: url(/assets/images/residential/hero.webp);
+
+			article.hero-content {
+				padding: 18rem 2rem 4rem 2rem;
+				text-align: center;
+
+				.hero-info {
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: @breakpoints[small]) {
+	.residential.content {
+		section:nth-child(1) {
+			background-position: right 20% center;
+
+			article.hero-content {
+				padding: 18rem 0rem 4rem 0rem;
+
+				.hero-info {
+					div {
+						&:nth-child(1) {
+							h2 {
+								font-size: 16px;
+
+								span {
+									font-size: 40px;
+								}
+							}
+
+							h3 {
+								color: #6CC24A;
+								margin-top: -4px;
+								font-size: 14px;
+							}
+						}
+
+						&:nth-child(2){
+							h2 {
+								margin-top: -2px;
+								font-weight: lighter;
+								font-size: 55px;
+							}
+						}
+
+						&:nth-child(3) {
+							margin-top: 15px;
+							margin-right: 2px;
+							text-align: left;
+
+							h2 {
+								color: #6CC24A;
+								font-size: 18px;
+							}
+
+							h3 {
+								color: #6CC24A;
+								font-size: 18px;
+							}
+						}
+
+						&:nth-child(4),
+						&:nth-child(5) {
+							margin-right: 0px;
+						}
+
+						&:nth-child(4) {
+							margin-top: 6px;
+
+							h2 {
+								font-size: 50px;
+							}
+						}
+
+						&:nth-child(5) {
+							h2 {
+								color: #6CC24A;
+								font-size: 40px;
+							}
+						}
+
+						&:nth-child(6){
+							h2 {
+								color: #6CC24A;
+								margin-top: 15px;
+								font-size: 18px;
+							}
+
+							h3 {
+								font-size: 18px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

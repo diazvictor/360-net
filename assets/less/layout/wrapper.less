@@ -1,0 +1,363 @@
+// @package   360Net
+// @filename  wrapper.less
+// @version   1.0
+// @autor     Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      10.11.2021 23:55:25 -04
+
+// Para compilar el archivo desde la consola:
+// lessc wrapper.less > wrapper.css
+
+body {
+	@media screen and (max-width: @breakpoints[large]) {
+		&.not-scroll-y {
+			overflow-y: hidden;
+		}
+	}
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "header"
+						 "content"
+						 "footer";
+	min-height: 120vh;
+	overflow-x: hidden;
+
+	.header {
+		grid-area: header;
+		height: auto;
+		position: relative;
+	}
+
+	> .content {
+		grid-area: content;
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	> .footer {
+		grid-area: footer;
+		background-color: @blue-dark;
+		color: @white;
+		display: grid;
+
+		> .content {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 40px;
+			padding: 70px 0px 70px 0px;
+			margin: 0 auto;
+			width: 80%;
+
+			p {
+				line-height: 1.5;
+				font-weight: 400;
+				font-size: 14px;
+			}
+
+			span.title {
+				display: block;
+				color: #489FDF;
+				font-weight: bold;
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+
+			.links {
+				a {
+					display: flex;
+					color: @white;
+					line-height: 1.5;
+					font-weight: 400;
+					font-size: 14px;
+					margin-bottom: 20px;
+					align-items: center;
+
+					&:last-child {
+						margin-bottom: 0
+					}
+
+					&::before {
+						font-family: "Font Awesome 5 Free";
+						font-weight: 900;
+						content: "\f054";
+						font-size: 12px;
+						color: #489FDF;
+						margin-right: 10px;
+					}
+				}
+			}
+
+			.support {
+				.row {
+					margin-bottom: 20px;
+
+					&:last-child {
+						margin-bottom: 0
+					}
+				}
+			}
+
+			.resume {
+				p {
+					margin-bottom: 40px;
+				}
+				
+				.social {
+					display: flex;
+					align-items: center;
+
+					a {
+						color: @white;
+						font-size: 20px;
+						background: #3D4E80;
+						border-radius: 50%;
+						text-align: center;
+						display: flex;
+						width: 40px;
+						margin-right: 5px;
+						height: 40px;
+						justify-content: center;
+						align-items: center;
+
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+
+					.chat-operator {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						margin-bottom: 10px;
+
+						button {
+							background: none;
+							border: none;
+
+							svg {
+								display: block;
+							}
+
+							&:hover {
+								cursor: pointer;
+							}
+						}
+
+						.chat {
+							display: none;
+							position: absolute;
+							right: 5rem;
+							bottom: 4px;
+							box-shadow: 0rem 1rem 2rem 0.1rem rgba(0, 0, 0, .075);
+
+							&.is-active {
+								display: block;
+							}
+
+							&-head {
+								display: flex;
+								align-items: center;
+								background-color: @green;
+								border-radius: 15px 15px 0 0;
+
+								svg {
+									margin-left: 1rem;
+									margin-right: 15px;
+								}
+
+								.title {
+									display: flex;
+									flex-flow: column;
+									border-left: 1px solid @white;
+									padding-left: 15px;
+
+									span {
+										&:first-child {
+											font-size: 14px;
+										}
+
+										&:last-child {
+											font-size: 10px;
+										}
+									}
+								}
+
+								button {
+									padding: 0.8rem 1rem;
+									margin-left: auto;
+
+									i {
+										color: white;
+										font-size: 1.5em;
+									}
+								}
+							}
+
+							&-body {
+								display: flex;
+								flex-flow: column;
+								align-items: flex-end;
+								background-color: @white;
+								padding: 0.8rem 1rem;
+								height: 400px;
+								overflow-y: scroll;
+
+								.message {
+									max-width: 90%;
+
+									& + .message {
+										margin-top: 10px;
+									}
+
+									p {
+										margin-bottom: 0;
+									}
+
+									&.is-received {
+										p {
+											background: #E2F3DB;
+											color: @blue-dark;
+											padding: 0.938rem 1.25rem;
+											font-size: 15px;
+											font-weight: 400;
+											border-radius: 15px;
+										}
+									}
+
+									&.is-sent {
+										p {
+											background: rgba(240, 240, 255, 1);
+											color: @blue-dark;
+											padding: 0.938rem 1.25rem;
+											font-size: 15px;
+											font-weight: 400;
+											border-radius: 15px;
+										}
+									}
+								}
+							}
+
+							&-foot {
+								display: grid;
+								grid-template-columns: auto 200px auto;
+								background-color: @white;
+								border-top: 1px solid #CCCCCC;
+								border-radius: 0 0 15px 15px;
+
+								button {
+									padding: 0.8rem 1rem
+								}
+
+								input {
+									background: none;
+									border: none;
+								}
+							}
+						}
+					}
+				}
+			}
+
+		}
+
+		.copyright {
+			color: @white;
+			font-weight: 400;
+			font-size: 14px;
+			padding: 30px 0;
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			border-top: 1px solid #3D4E80;
+		}
+	}
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}		
+}
+
+// Tablet
+@media screen and (max-width: @breakpoints[medium]) {
+	.wrapper {
+		> .footer {
+			> .content {
+				display: grid;
+				grid-template-columns: 1fr;
+
+				span.title , p {
+					text-align: center
+				}
+
+				.links {
+					border-bottom: 1px solid #3D4E80;
+					padding-bottom: 40px;
+
+					a {
+						justify-content: center;
+
+						&::before {
+							font-family: inherit;
+							content: "";
+							margin-right: 0;
+						}
+					}
+				}
+
+				.support {
+					border-bottom: 1px solid #3D4E80;
+					padding-bottom: 40px;
+				}
+
+				.resume {
+					.social {
+						justify-content: center
+					}
+				}
+			}
+
+			.copyright {
+				p {
+					width: 80%;
+					margin: 0 auto;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: @breakpoints[small]) {
+	.wrapper {
+		> .footer {
+			> .content {
+				.resume {
+					.social {
+						.chat-operator {
+							.chat {
+								right: -22px;
+								bottom: 0;
+
+								&-head {}
+
+								&-body {}
+
+								&-foot {}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,264 @@
+// @package   360Net
+// @filename  contact.less
+// @version   1.0
+// @author    Díaz Urbaneja Víctor Eduardo Diex <diazvictor@tutamail.com>
+// @date      11.11.2021 00:22:02 -04
+
+// Para compilar el archivo desde la consola:
+// lessc contact.less > contact.css
+
+.contact {
+	&.content {
+		padding-top: 130px;
+		padding-bottom: 120px;
+	}
+
+	.container {
+		width: 80%;
+
+		section {
+			article {
+				.banner {
+					margin-bottom: 40px;
+
+					h1 {
+						font-size: 60px;
+						font-weight: 400;
+						margin-bottom: 20px;
+					}
+
+					p {
+						width: 40%;
+						margin: 0 auto;
+						color: @grey;
+						font-weight: 400;
+					}
+				}
+
+				.card-contact {
+					display: flex;
+		
+					h2 {
+						margin-bottom: 25px;
+					}
+		
+					.info {
+						width: 65%;
+						background-color: @green;
+						color: @white;
+						border-radius: 15px 0 0 15px;
+						padding: 50px 50px;
+
+						> p {
+							margin-bottom: 25px;
+						}
+
+						p {
+							font-weight: 400;
+							line-height: 1.5;
+						}
+
+						.list-info {
+							.item {
+								display: flex;
+								align-items: center;
+								margin-bottom: 40px;
+
+								.icon {
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									width: 50px;
+									height: 50px;
+									border: 1px solid @white;
+									border-radius: 50%;
+									margin: 0 15px 0 0;
+								}
+
+								&:first-child {
+									align-items: normal
+								}
+
+								&:last-child {
+									margin-bottom: 0
+								}
+							}
+						}
+					}
+		
+					.form {
+						width: 100%;
+						background-color: @bg-light;
+						color: @green;
+						padding: 50px 50px;
+						border-radius: 0 15px 15px 0;
+
+						.fields {
+							display: grid;
+							grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+							grid-gap: 30px;
+						}
+
+						.field {
+							margin-bottom: 30px;
+
+							label {
+								font-weight: 800;
+
+								& + input, & + select,
+								& + textarea {
+									margin-top: 5px;
+								}
+							}
+
+							input, textarea, select {
+								width: 100%;
+								background-color: transparent;
+								border: none;
+								border-radius: 0;
+								border-bottom: 1px solid @grey-light;
+								padding: 10px 0px 4px 0px;
+								font-weight: 400;
+								color: @grey-light;
+								font-size: 16px;
+							}
+
+							input, textarea {
+								&::placeholder {
+									color: @grey-light;
+									font-weight: 400;
+								}
+							}
+
+							select {
+								-webkit-appearance: none;
+								appearance: none;
+								background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236F6F6F%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+								background-repeat: no-repeat, repeat;
+								background-position: right 0.2rem top 50%, 0 0;
+								background-size: 0.6em auto, 100%;
+								// .form .field select::-ms-expand {
+									// display: none;
+								// }
+								// .form .field select:hover {
+									// cursor: pointer;
+								// }
+								// .form .field select:focus {
+									// border-color: #787b76;
+								// }
+								// .form .field select option {
+									// font-weight: normal;
+								// }
+							}
+						}
+
+						.has-icon.has-float {
+							display: none
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.contact {
+		.container {
+			width: 100%;
+
+			section {
+				article {
+					.banner {
+						h1 {
+							font-size: 40px;
+						}
+	
+						p {
+							width: 80%;
+						}
+					}
+	
+					.card-contact {
+						.info {
+							display: none;
+						}
+			
+						.form {
+							position: relative;
+							border-left: 15px solid @green;
+
+							.has-icon.has-float {
+								position: absolute;
+								top: 45%;
+								left: -25px;
+								width: 50px;
+								height: 50px;
+								background: @green;
+								border-radius: 50%;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+							}
+
+							.button {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.contact {
+		.container {
+			section {
+				article {
+					.card-contact {
+						.form {
+							.fields {
+								grid-template-columns: 1fr;
+								grid-gap: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: @breakpoints[small]) {
+	.contact {
+		&.content {
+			padding-top: 100px;
+		}
+
+		.container {
+			width: 100%;
+
+			section {
+				article {
+					.banner {
+						h1 {
+							font-size: 40px;
+						}
+	
+						p {
+							width: 80%;
+						}
+					}
+	
+					.card-contact {
+						.info {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
