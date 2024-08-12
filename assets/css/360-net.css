@@ -269,8 +269,6 @@ a {
 .columns .row.has-centered {
   justify-self: center;
 }
-@media screen and (max-width: 1440px) {
-}
 @media screen and (max-width: 1024px) {
   .columns.columns-lg-1 {
     grid-template-columns: repeat(1, 1fr);
@@ -2635,7 +2633,7 @@ a {
   padding: 0;
 }
 .isp.content section:nth-child(1) {
-  background-image: linear-gradient(90deg, rgba(61, 78, 128, 0.9) 0%, rgba(61, 78, 128, 0.5) 50%, rgba(255, 255, 255, 0) 100%), url(/assets/images/isp/hero.webp);
+  background-image: linear-gradient(90deg, rgba(61, 78, 128, 0.9) 0%, rgba(61, 78, 128, 0.5) 50%, rgba(255, 255, 255, 0) 100%), url(/360-net/assets/images/isp/hero.webp);
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2758,7 +2756,7 @@ a {
   background: #489FDF;
 }
 .isp.content section:nth-child(3) {
-  background-image: linear-gradient(180deg, rgba(72, 159, 223, 0.2), rgba(72, 159, 223, 0.1)), url(/assets/images/isp/se_mejor.webp);
+  background-image: linear-gradient(180deg, rgba(72, 159, 223, 0.2), rgba(72, 159, 223, 0.1)), url(/360-net/assets/images/isp/se_mejor.webp);
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
@@ -2918,7 +2916,7 @@ a {
   background: #489FDF;
 }
 .isp.content section:nth-child(5) {
-  background-image: url(/assets/images/isp/como_adquirirlo.webp);
+  background-image: url(/360-net/assets/images/isp/como_adquirirlo.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3110,7 +3108,7 @@ a {
   padding: 0;
 }
 .company.content section:nth-child(1) {
-  background: linear-gradient(90deg, rgba(61, 78, 128, 0.8), rgba(81, 125, 185, 0.7)), url(/assets/images/company/hero.webp);
+  background: linear-gradient(90deg, rgba(61, 78, 128, 0.8), rgba(81, 125, 185, 0.7)), url(/360-net/assets/images/company/hero.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -3140,7 +3138,7 @@ a {
 }
 .company.content section:nth-child(2) {
   position: relative;
-  background: url(/assets/images/company/possibilities.webp);
+  background: url(/360-net/assets/images/company/possibilities.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -3838,7 +3836,7 @@ a {
   padding-top: 0px;
 }
 .residential.content section:nth-child(1) {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(255, 255, 255, 0) 70%), url(/assets/images/residential/hero.webp);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 30%, rgba(255, 255, 255, 0) 70%), url(/360-net/assets/images/residential/hero.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -4031,7 +4029,7 @@ a {
 }
 .residential.content section:nth-child(3) {
   position: relative;
-  background: linear-gradient(90deg, rgba(32, 42, 68, 0.8), rgba(32, 42, 68, 0.8)), url(/assets/images/residential/fibra_optica.webp);
+  background: linear-gradient(90deg, rgba(32, 42, 68, 0.8), rgba(32, 42, 68, 0.8)), url(/360-net/assets/images/residential/fibra_optica.webp);
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -4184,7 +4182,7 @@ a {
     font-size: 30px;
   }
   .residential.content section:nth-child(1) {
-    background-image: url(/assets/images/residential/hero.webp);
+    background-image: url(/360-net/assets/images/residential/hero.webp);
   }
   .residential.content section:nth-child(1) article.hero-content {
     padding: 18rem 2rem 4rem 2rem;
